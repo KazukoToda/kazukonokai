@@ -1,0 +1,13 @@
+# 無視するファイル
+venv/
+*.pptx
+*.xlsx
+data/members_radio.json
+data/members_x.json
+data/members_merged.json# 無視するファイルやフォルダ
+venv/
+*.pyc
+__pycache__/
+.DS_Store
+*.pptx
+*.xlsx
