@@ -1,0 +1,181 @@
+/* レトロな喫茶店風のデザイン */
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #f5e9dc; /* ベージュ系の背景色 */
+    color: #5c4033; /* ダークブラウンの文字色 */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d2b48c; /* タンカラー */
+    color: #5c4033; /* ダークブラウン */
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 4px solid #a0522d; /* セピア調の枠線 */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .counter {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #5c4033; /* 濃い茶色 */
+    border: 4px solid #a0522d; /* セピア調の枠線 */
+    border-radius: 16px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.card {
+    background: #fdf5e6; /* オールドペーパー風 */
+    border: 2px solid #a0522d;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.card .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.card .location, .card .age, .card .comment {
+    margin: 0.3rem 0;
+}
+
+footer {
+    background-color: #d2b48c; /* タンカラー */
+    color: #5c4033;
+    text-align: center;
+    padding: 1rem;
+    border-top: 4px solid #a0522d;
+}
+
+/* メンバーリスト全体の丸角枠 */
+.main {
+    background-color: #5c4033; /* 濃い茶色 */
+    border: 4px solid #a0522d; /* セピア調の枠線 */
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+/* メンバー間の左右の余白 */
+.member-container {
+    display: inline-block; /* 横並びにする */
+    vertical-align: top; /* 上揃え */
+    margin: 0 1rem; /* 左右の余白 */
+    background-color: #fff; /* カードの背景色 */
+    border-radius: 8px; /* カードの丸角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* カードの影 */
+    padding: 1rem; /* 内側の余白 */
+}
+
+/* テーブルとコメント丸枠の上下マージンを削除 */
+.member-table {
+    margin-bottom: 0; /* 下のマージンを削除 */
+}
+
+.comment-box {
+    margin-top: 0; /* 上のマージンを削除 */
+}
+
+/* テーブルのスタイル */
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.member-table td {
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    color: #5c4033; /* ダークブラウン */
+}
+
+.member-table td[colspan="2"] {
+    text-align: left; /* 左寄せに変更 */
+    font-style: normal; /* イタリックを解除済み */
+    color: #5c4033; /* ダークブラウン */
+    padding-top: 0.5rem;
+}
+
+/* コメントボックスのスタイル */
+.comment-box {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* メンバー全体のコンテナ */
+.member-container {
+    margin-bottom: 2rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* メンバーリストのスタイル */
+#member-list {
+    display: flex;
+    flex-wrap: wrap; /* 横並びにしつつ折り返しを許可 */
+    gap: 16px; /* カード間のスペース */
+    justify-content: center; /* 中央揃え */
+}
+
+.member-card {
+    flex: 1 1 calc(33.333% - 16px); /* デフォルトで1行に3人 */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fdf5e6; /* オールドペーパー風 */
+    text-align: center;
+}
+
+/* スマホ用のレイアウト */
+@media (max-width: 768px) {
+    .member-card {
+        flex: 1 1 100%; /* 1行に1人 */
+    }
+}
