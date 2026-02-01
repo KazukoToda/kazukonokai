@@ -28,10 +28,8 @@ header h1 {
     font-size: 4rem; /* フォントサイズを4倍に拡大 */
     color: #0b3797; /* オレンジ色 */
     text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff; /* 白の縁取り */
-    position: absolute; /* 絶対配置 */
-    bottom: 20%; /* ヘッダーの下部に配置 */
-    left: 50%; /* 中央揃え */
-    transform: translateX(-50%); /* 中央揃えを正確に */
+    position: relative; /* 絶対配置を相対配置に変更 */
+    margin-top: 20%; /* ヘッダー内での位置を調整 */
     text-align: center; /* テキストを中央揃え */
 }
 
