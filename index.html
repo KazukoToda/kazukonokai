@@ -9,10 +9,23 @@
 <body>
     <header>
         <h1>かずこの会へようこそ！</h1>
-        <p class="counter">あなたは<span id="visitor-count">1234</span>人目の訪問者です！</p>
+        <p class="counter hidden">あなたは<span id="visitor-count">1234</span>人目の訪問者です！</p>
     </header>
 
     <main class="main">
+        <h2>かずこの会　相関図</h2>
+        <div class="image-gallery">
+            <img src="data/kazukonokai_radio.jpg" alt="かずこの会ラジオ" class="thumbnail" onclick="openModal('data/kazukonokai_radio.jpg')">
+            <img src="data/kazukonokai_x.jpg" alt="かずこの会X" class="thumbnail" onclick="openModal('data/kazukonokai_x.jpg')">
+            <img src="data/kazukonokai_line.jpg" alt="かずこの会LINE" class="thumbnail" onclick="openModal('data/kazukonokai_line.jpg')">
+        </div>
+
+        <!-- モーダル -->
+        <div id="image-modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+
         <h2>メンバー一覧</h2>
         <div id="member-list">
             <!-- メンバー情報カードがここに表示されます -->
@@ -23,6 +36,19 @@
         <p>© 2026 かずこの会. All rights reserved.</p>
     </footer>
 
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            modal.style.display = 'block';
+            modalImage.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = 'none';
+        }
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
