@@ -116,18 +116,30 @@ footer {
 }
 
 .member-table td {
-    padding: 0.5rem;
+    padding: 0.3rem; /* 余白を小さく */
     border: none;
-    text-align: center;
-    font-size: 1rem;
+    text-align: left; /* 左寄せ */
+    font-size: 0.85rem; /* 全体をさらに小さく */
     color: #5c4033; /* ダークブラウン */
+    vertical-align: top; /* 上寄せ */
 }
 
-.member-table td[colspan="2"] {
-    text-align: left; /* 左寄せに変更 */
-    font-style: normal; /* イタリックを解除済み */
-    color: #5c4033; /* ダークブラウン */
-    padding-top: 0.5rem;
+.member-table td:first-child {
+    width: 10%; /* 全体の約3分の1の幅に設定 */
+    white-space: nowrap; /* テキストの折り返しを防止 */
+}
+
+/* 名前の列の折り返しを許可 */
+.member-table td:nth-child(2) {
+    width: 15%; /* 現在の約2分の1の幅に設定 */
+    white-space: normal; /* テキストの折り返しを許可 */
+}
+
+.member-table td[rowspan="2"] {
+    text-align: left; /* コメントを左寄せ */
+    vertical-align: top; /* 中央揃え */
+    font-size: 0.8rem; /* コメント部分をさらに小さく */
+    color: #5c4033;
 }
 
 /* コメントボックスのスタイル */
@@ -171,7 +183,8 @@ footer {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 16px;
+    padding: 8px; /* カード全体の余白を小さく */
+    margin: 8px; /* カード間の余白を小さく */
     background: #fdf5e6; /* オールドペーパー風 */
     text-align: center;
 }
