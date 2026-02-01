@@ -304,11 +304,18 @@ h2 {
 
 .thumbnail {
     width: 100%; /* デバイス幅いっぱいに拡大 */
-    max-width: 800px; /* 最大幅を設定 */
+    max-width: 600px; /* 最大幅を600pxに制限 */
     height: auto;
+    margin: 0 auto; /* 中央揃え */
     cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .thumbnail {
+        max-width: 90%; /* 小さい画面では幅を90%に制限 */
+    }
 }
 
 /* モーダルのスタイル */
